@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mario Diaz Quiroga">
+    <meta name="description" content="Quiz de ingenieria web, Creacion de formulario">
+    <meta name="keywordl" content="formulario,quiz,ingenieria,control,web">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+
+<body background="imagen.png">
+
+    <h1 class="titulo">Control Ingenieria Web.</h1>
+
+    <form class="form needs-validation" onsubmit="enviar($event)" novalidate>
+        <h2 class="titulo2">Formulario</h2>
+
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Nombre Completo</label>
+                <input class="controls" type="text" name="nombre completo" id="nombre"
+                    placeholder="Ingrese su nombre completo">
+                <div class="valid-feedback">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3" id="datos">
+                <label for="validationCustom01">Correo</label>
+                <input class="controls" type="email" name="correos" id="correo" placeholder="Ingrese su Correo">
+                <div class="valid-feedback">
+
+                </div>
+            </div>
+        </div>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+            <div class="row">
+                <label class="btn btn-secondary active" >
+                    <input type="radio" name="options" id="option1" onclick=mostrarDni() > DNI
+                    <input type="text" name="dni" placeholder="Ingrese su DNI"  id="dni" hidden= "true" >
+                </label>
+            </div>
+            <div class="row">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" onclick=mostrarRut() id="option2"> RUT
+                    <input type="number" name="rut" placeholder="Ingrese su RUT" hidden="true" id="rut">
+                </label>
+            </div>
+           
+        </div>
+
+        <button class="btn btn-primary" type="submit">Ingresar Datos</button>
+        <p id="mensaje"></p>
+    </form>
+
+</body>
+
+</html>
+
+
+<script src="./main.ts"></script>
